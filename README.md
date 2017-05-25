@@ -28,6 +28,17 @@ As alternative, Solid State Relay can be used as well (with zero cross detection
 But you can not use this approach for light dimming which needs more higher frequency.
 For 50 Hz AC, the triac can be on from 0 to 100 times per second. For resistive load (heaters) it is very normal, but bulbs will blinking.
 
+# Zero Cross Detector #
+The detector is necessary for processing Bresenham Algorithm. 
+[The zero cross detector schematic](Schematic/AC-Zero-Cross-Detector.png)
+
+And oscillogram of this circuit:
+![Zero Cross Detector Oscillogram](https://raw.githubusercontent.com/biletnikov/bresenham-triac-driver/master/Images/ZeroCrossDetector_Oscillogram.png)
+
+The peak of the pulse, when the volotage equals to 0 Volts.
+
+![Zero Cross Detector Oscillogram Explanation](https://raw.githubusercontent.com/biletnikov/bresenham-triac-driver/master/Images/ZeroCrossDetector_Oscillogram_explanation.png)
+
 # Installation #
 Create a new folder called "BresenhamTriacDriver" under the folder named "libraries" in your Arduino sketchbook folder.
 Create the folder "libraries" in case it does not exist yet. Place all the files in the "BresenhamTriacDriver" folder.
